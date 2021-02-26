@@ -1,0 +1,514 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset = "UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, height=device-height, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<style>
+.name {
+margin-top:450px;
+margin-left:20px;
+  background-color: #ccffff;
+  width: 340px;
+  border: 15px solid #330000;
+  padding: 50px;
+  margin: 20px;
+}
+.heading{
+
+ width: 750px;
+  height: 130px;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 10px 10px ;
+}
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #330000, 0 0 20px #330000, 0 0 30px #330000, 0 0 40px #330000, 0 0 50px #330000, 0 0 60px #330000, 0 0 70px #330000;
+  }
+  
+  to {
+    text-shadow: 0 0 20px wheat, 0 0 30px wheat, 0 0 40px wheat, 0 0 50px wheat, 0 0 60px wheat, 0 0 70px wheat, 0 0 80px wheat;
+  }
+}
+.calculator
+{
+
+   margin-top:130px;
+   margin-left:80px;
+   width:450px;
+   border:4px solid black;
+   border-radius:15px;
+   background-color:#330000;
+ }
+.screen
+{
+
+    margin-top:10px;
+    margin-left:10px; 
+    border-radius:10px;
+    width:420px;
+    height:100px;
+    background-color:#ffcc99;
+ }
+#answer{
+padding:20px;
+    margin-top:10px;
+    margin-left:10px;
+    border:1=5px solid black;
+    border-radius:10px;
+    width:400px;
+    height:80px;
+    background-color:black;
+    text-align:right;
+    font-size:25px;
+    font-weight:bold;
+	color:#ffcc99;
+}
+ #web
+{
+    margin-top: 12px;  
+}
+.std {
+
+    width:70px;
+    height:45px;
+    border:1px black solid;
+    border-radius:20px;
+    font-weight: bold;
+    font-size:22px;
+    margin-bottom:10px;
+    margin-left:10px;
+background-color:#ccffff;
+}
+.std:hover, .scop:hover, .cl:hover, .equal:hover, .clear:hover{
+    background-color:antiquewhite; 
+    color:red;
+}
+.scop
+{
+
+   margin-bottom: 10px;
+   margin-left:20px; 
+   border-radius:16px;
+   width:80px;
+   height:40px; 
+   background-color:white;
+   border:1px white solid;
+   font-size: 20px white; 
+
+}
+.stop{
+    background-color:#ececec;
+}
+.equal {
+    width:115px;
+    height:45px;
+    border:1px #ffcc99 solid;
+    border-radius:20px;
+    font-weight: bold;
+    font-size:22px;
+    margin-bottom:10px;
+    margin-left:10px;
+}
+.clear {
+
+    width:115px;
+    height:45px;
+    border:1px #ffcc99 solid;
+    border-radius:20px;
+    font-weight: bold;
+    font-size:22px;
+    margin-bottom:10px;
+    margin-left:10px;
+}
+.cl{
+padding:10px;
+     width:70px;
+    height:45px;
+    border:1px #ffcc99 solid;
+    border-radius:20px;
+    font-weight: bold;
+    font-size:22px;
+    margin-bottom:10px;
+    margin-left:10px;
+	background-color:#80bfff;
+}
+.notepad{
+    margin-top:130px;
+    width:300px;
+    margin-left:260px;
+    background-color:#fffce2;
+    border:2px solid black; 
+    font-size:17px;
+    color:black;
+	border-radius:5px;
+	
+}
+.head{
+   margin-top:10px;
+    text-decoration:underline;
+}
+.pad{
+    margin-top:10px;
+    margin-left:2px;
+    margin-bottom:5px;
+    width:290px;
+    background: #fffce2;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9efff), color-stop(14%, #fffce2)) 0 4px;
+    background: -webkit-linear-gradient(top, #d9eaff 0%, #fffce2 14%) 0 4px;
+    background: -moz-linear-gradient(top, #d9eaff 0%, #fffce2 14%) 0 4px;
+    background: -ms-linear-gradient(top, #d9eaff 0%, #fffce2 14%) 0 4px;
+    background: -o-linear-gradient(top, #d9eaff 0%, #fffce2 14%) 0 4px;
+    background: linear-gradient(top, #d9eaff 0%, #fffce2 14%) 0 4px;
+    -webkit-background-size: 100% 20px;
+     -moz-background-size: 100% 20px;
+    -ms-background-size: 100% 20px;
+    -o-background-size: 100% 20px;
+}
+.pad:hover{
+    border:1px solid #4682B4;
+    cursor:pointer;
+}
+.pad2{
+    height:500px;
+    }
+#memory{
+    display:none;
+}
+#display{
+    margin-top:4px;
+    line-height:20px;
+    height:500px;
+    overflow: scroll;
+    width:300px;
+}
+#b1,#b2{
+    margin-top:10px;
+    margin-left:30px;
+    text-decoration:none;
+    font-size:16px;
+	color:white;
+	background-color:#330000;
+	border:2px solid black;
+	border-radius:5px;
+	padding:8px;
+}
+#b2{
+    margin-left:80px;
+}
+.text{
+    font-size:14px;
+    line-height: 20px;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<title>Scientific Calculator</title>
+</head> 
+<body style="background-image:url('./images.jpg');background-attachment:fixed;background-size:cover;background-color:wheat;">  
+<center><div class="heading"><center>
+<h1 class="glow" >CALCULATOR</h1>
+<center>
+</div></center>
+<div class="row">
+<div class=" column"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="name"><h2 style="color:#330000;"><font size="6">COMPETETIVE PROGRAMMING</font></h2>
+<p ><font size="5">---BHAVYA</font></p>
+<p>----Section-1</p>
+</div>
+</div>
+
+<div class="column">
+ <section class="calculator">
+<form action="">
+<div class="screen"> <!-- Answer screen -->
+<input type="text" id="answer" value="0">
+</div>
+<div id ="web"> <!-- Scientific Calculator -->
+    <input type="button" value="sin"    class="scop" />
+    <input type="button" value="cos"    class="op scop" />
+    <input type="button" value="tan"    class="op scop" />  
+    <input type="button" value="ln"     class="op scop" />  <br>
+    <input type="button" value="log"    class="op scop" />
+    <input type="button" value="10^x"   class="op scop" />
+    <input type="button" value="2^x"    class="op scop" />
+    <input type="button" value="x²"     class="op scop" />  <br>
+    <input type="button" value="√x"     class="op scop" />
+    <input type="button" value="∛x"     class="op scop" />
+    <input type="button" value="1/x"    class="op scop" />
+    <input type="button" value="x!"     class="op scop" />  <br>
+    <input type="button" value="e"      class="op scop" />
+    <input type="button" value="ln10"   class="op scop" />  
+    <input type="button" value="Pi"     class="op scop" />
+    <input type="button" value="float"  class="op scop"/>  <br>
+<input type="button" value="asin"      class="op scop" />
+    <input type="button" value="acos"   class="op scop" />  
+    <input type="button" value="atan"     class="op scop" />
+    <input type="button" value="floor"  class="op scop"/>  <br>
+<input type="button" value="to_hd"      class="op scop" />
+    <input type="button" value="to_oct"   class="op scop" />  
+    <input type="button" value="to_bin"     class="op scop" />
+    <input type="button" value="ceil"  class="op scop"/>  <br>
+</div>
+<!-- Displaying std calculator -->
+<div>
+    <input type="button" value="7"  class="std number" />
+    <input type="button" value="8"  class="std number" />
+    <input type="button" value="9"  class="std number" />
+    <input type="button" value="/"  class="std stop" />
+    <input type="button" value="C"  class="cl" /><br>
+    <input type="button" value="4"  class="std number" />
+    <input type="button" value="5"  class="std number"/>
+    <input type="button" value="6"  class="std number" />
+    <input type="button" value="*"  class="std stop"/>
+    <input type="button" value="%"  class="std stop" /><br>
+    <input type="button" value="1"  class="std number"/>
+    <input type="button" value="2"  class="std number"/>
+    <input type="button" value="3"  class="std number"/>
+    <input type="button" value="-"  class="std stop"/>
+    <input type="button" value="+"  class="std stop"/>	<br>
+    <input type="button" value="0"  class="std number"/>
+    <input type="button" value="."  class="std number"/>
+    <input type="button" value="="  class="equal"/>
+    <input type="button" value="&larr;"  class=" clear"/>
+</div>
+</form>
+</section>   
+</div> 
+
+<div class="column">
+ <article class= "notepad">
+     <button id = "b1" onclick = "instruct()">Note-Pad</button>
+     <button id= "b2"  onclick = "memory()">History</button>
+  <div id = "instruct">
+  <div class="pad">
+      <p class="text">
+          <textarea rows=24 cols=36 value="Your text here..." style="opacity:0.5">Your text Here...(Make sure to copy history else where before using clear button on calculator.)</textarea>
+    </div>   
+  </div>
+  <div id = "memory">
+      <div class="pad pad2">
+      <p id = "display">     
+      </p>
+      </div>
+ </div>
+</article>   
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+ // jquery Coding 
+$(document).ready(function()
+{   $("#display").html("");
+    var final = "", ans = "", result = "", value_res = "";
+    $(".std").click(function(){
+        var value = $(this).val();     // Getting the value of the button clicked
+        ans = $("#answer").val();  
+    // Getting the value on the screen
+        if(ans == 0) 
+          ans = "";                    
+        $("#answer").val(ans+value+'\n');   
+        $("#display").html($("#display").html() +value);// Displaying on the memory pad
+        final = $("#answer").val();   
+    });
+    $(".equal").click(function(){
+        result = eval(final);          // Evalauating the result on equal to press 
+        $("#answer").val(final);   
+        var a = result.toFixed(2);
+         $("#display").html(+$("#display").html() + "=" + a+ "<br>" ).html();// Displaying on memory pad
+    }); 
+    $(".scop").click(function(){ 
+        sc_op = $(this).val();         // taking the values of the scientific operators 
+        if(result == ""){              // Checking the result 
+          result = final; 
+        } 
+        if(sc_op == 'sin'){               
+          result = Math.sin(result);
+        }
+        if(sc_op == 'cos'){          
+          result = Math.cos(result);
+        }
+        if(sc_op == 'tan'){           
+          result = Math.tan(result);
+        }
+        if(sc_op == 'asin'){          
+          result = Math.asin(result);
+        }
+        if(sc_op == 'acos'){          
+          result = Math.acos(result);
+        }
+        if(sc_op == 'atan'){           
+          result = Math.atan(result);
+        }
+        if(sc_op == 'ln'){           // for ln
+          result = Math.log(result);
+        }
+        if(sc_op == 'log'){           // for log
+          result = (Math.log(result) / Math.LN10);
+        }
+        if(sc_op == 'e(x)'){           // for e(x)
+          result = Math.exp(result);
+        }
+        if(sc_op == '10^x'){           // for 10(x)
+          result = Math.pow(10,result);
+        } 
+        if(sc_op == '2^x'){           // for 2(x)
+          result = Math.pow(2,result);
+        }
+        if(sc_op == 'x²'){           // for x^2
+          result = Math.pow(result,2);
+        }
+        if(sc_op == 'x³'){           // for x^3
+          result = Math.pow(result,3);
+        }
+        if(sc_op == '√x'){           // for x^1/2
+          result = Math.sqrt(result);
+        }
+        if(sc_op == '∛x'){           // for x^1/3
+          result = Math.pow(result,1/3);
+        }
+        if(sc_op == '1/x'){           // for 1/x
+          result = (1 / result);
+        }
+        function factorial(number)
+        {
+           var fact =1 ;
+           for(i = 1; i <= number; i++){
+              fact = fact * i ;
+          }
+          return fact;
+        }
+        if(sc_op == 'x!'){   // for factorial
+           result = factorial(result);
+        }
+        
+        if(sc_op == 'floor'){           
+          result = Math.floor(result);
+        }
+        if(sc_op == 'ceil'){           
+          result = Math.ceil(result);
+        }
+        if(sc_op == 'e'){           
+          result = Math.E;
+        }
+        if(sc_op == 'ln10'){           
+          result = Math.LN10;
+        }
+        if(sc_op == '√1/2'){         
+          result = Math.SQRT1_2;
+        }
+        if(sc_op == '√2'){          
+          result = Math.SQRT2;
+        }
+        if(sc_op == 'ln2'){         
+          result = Math.LN2;
+        }
+        if(sc_op == 'Pi'){         
+          result = Math.PI;
+        }
+        if(sc_op == 'to_oct'){         
+          var j = result, octal = ""; 
+          while(j>0){ 
+              octal = (j%8) + octal;
+              j = Math.floor(j/8);
+          }
+         result = octal; 
+        }
+        if(sc_op == 'to_hd'){
+          var j = result, hd = "";
+          while(j >0){
+              hd = (j % 16) + hd;
+              if(hd == '10') {
+                hd ='A';
+               }  
+              if(hd == '11') {
+                hd ='B';
+               }
+              if(hd == '12') {
+                hd ='C';
+               }
+              if(hd == '13') {
+                hd ='D';
+               } 
+              if(hd == '14') {
+                hd ='E';
+               }
+              if(hd == '15') {
+                hd ='F';
+                }
+            j = Math.floor(j / 16);
+          }
+          result = hd;
+        }
+        if(sc_op == 'to_bin'){           // for ln
+         result = (result >>> 0).toString(2);
+        }
+        $("#answer").val(result);
+         if(sc_op == "e" || sc_op == "ln10" || sc_op == "ln2" || sc_op == "Pi" || sc_op == "√2" || sc_op == "√1/2"){
+             $("#display").html($("#display").html() + "<br>(" + sc_op + ") = " + result.toFixed(4) + "<br>" + result.toFixed(4)+"<br>");
+         }
+        else 
+            if(sc_op == "to_oct" || sc_op == "to_hd" || sc_op == "to_bin"){
+              $("#display").html($("#display").html() + " " + sc_op + "=" + result + "<br>" + result+"<br>");
+            }
+         else{
+             $("#display").html($("#display").html() + "(" + sc_op + ") = " + result.toFixed(4) + "<br>" + result.toFixed(4)+"<br>");
+         }
+        
+        
+  });
+    $(".cl").click(function(){         // Clearing all results
+        result = 0;
+        $("#answer").val(result);
+        $("#display").html("");
+    });
+    $(".clear").click(function(){     // Clearing the values
+        if(result == ""){
+            result = final;
+        }
+        result = result.toString();
+        var len = result.length;
+        result = result.substr(0,(len - 1)); 
+        $("#answer").val(result);
+        r = $("#display").html();
+        res = $("#display").html().length;
+        $("#display").html(r.substr(0,res-1));
+    });
+});  
+//Js Coding
+var i = document.getElementById("instruct");
+var m = document.getElementById("memory");
+var b1 = document.getElementById("b1");
+var b2 = document.getElementById("b2");
+function instruct(){
+    i.style.display = "block";
+    m.style.display = "none";
+}
+function memory(){
+     i.style.display = "none";
+     m.style.display = "block"; 
+}
+</script>
+</body>
+</html>
